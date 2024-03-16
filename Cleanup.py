@@ -1,5 +1,4 @@
 import os
-import shutil
 
 class CleanupWorm:    
     # initialize the class with the path to start looking for directories
