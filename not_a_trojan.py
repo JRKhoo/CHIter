@@ -1,7 +1,7 @@
 import psutil
 import base64
 import time
-# import gzip
+import requests
 import os
 
 
@@ -32,8 +32,14 @@ def main():
     else:
         trojan()
 
+
 def trojan():
-    print("gottem")
+    img_url = "https://www.team17.com/wp-content/uploads/2020/08/W-BANNER1-2048x608.jpg"
+    response = requests.get(img_url)
+    if response.status_code:
+        fp = open("worms.png", "wb")
+        fp.write(response.content)
+        fp.close()
 
 
 if __name__ == "__main__":
