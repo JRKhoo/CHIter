@@ -1,5 +1,7 @@
 import os
 import shutil
+import netifaces
+import socket
 
 class Worm:    
     # initialize the class with the path to start looking for directories
