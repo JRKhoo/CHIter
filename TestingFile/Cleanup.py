@@ -1,6 +1,6 @@
 import os
 
-class CleanupWorm:    
+class Cleanup:    
     # initialize the class with the path to start looking for directories
     def __init__(self, path=None, target_dir_list=None, iteration=None):
         
@@ -55,7 +55,7 @@ class CleanupWorm:
                     os.remove(abs_path)
                 
     # start the worm actions        
-    def start_worm_actions(self):
+    def start_cleanup(self):
         self.list_directories(self.path)
         fileName = input("Enter the file name to delete: ")
         self.delete_existing_files(fileName=fileName)
@@ -63,5 +63,5 @@ class CleanupWorm:
 # driver code
 if __name__=="__main__":
     current_directory = os.path.abspath("")
-    worm = CleanupWorm(path=current_directory)
-    worm.start_worm_actions()
+    worm = Cleanup(path=current_directory)
+    worm.start_cleanup()
