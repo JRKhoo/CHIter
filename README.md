@@ -10,3 +10,6 @@ Run the file by exploiting an input validation vulnerability in SampleEntry, usi
 ```
 
 Cleanup the files downloaded using the Cleanup.py, specify the file name to clean
+```
+python3 Cleanup.py
+```
