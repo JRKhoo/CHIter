@@ -1,6 +1,6 @@
-<h2>Chiter</h2>
+# Chiter
 
-# Basic Worm containing a Trojan
+## Basic Worm containing a Trojan
 
 The worm spreads through your file subdirectories, starting from the directory it is placed in. Once inside, a trojan downloads resources from the internet and runs it on your computer.
 
