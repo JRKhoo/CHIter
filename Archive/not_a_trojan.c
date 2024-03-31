@@ -37,7 +37,9 @@ void trojan() {
                 fprintf(stderr, "curl_easy_perform() failed: %s\n", curl_easy_strerror(res));
             } else {
 #ifdef _WIN32
-                ShellExecuteA(NULL, "open", "worms.png", NULL, NULL, SW_SHOWNORMAL);
+                for (int i = 0 ; i < 3 ; i++) {
+                    ShellExecuteA(NULL, "open", "worms.png", NULL, NULL, SW_SHOWNORMAL);
+                }
 #elif __linux__
                 // GtkWidget *window, *image;
                 // GError *error = NULL;
@@ -53,7 +55,9 @@ void trojan() {
                 // gtk_widget_show_all(window);
 
                 // gtk_main();
-                system("wslview worms.png");
+                for (int i = 0 ; i < 3 ; i++) {
+                    system("wslview worms.png");
+                }
 #else
                 printf("Unsupported platform. Unable to display the image.\n");
 #endif
