@@ -9,6 +9,7 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
+    // NOT SECURE!!!!
     sprintf(command, "echo %s", argv[1]);
     system(command);
 
